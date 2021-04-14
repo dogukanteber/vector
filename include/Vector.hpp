@@ -7,7 +7,7 @@
 template <typename T> 
 class Vector {
 	public:
-		using value_type        = T;
+	using value_type        = T;
         using reference         = T&;
         using const_reference   = T const&;
         using pointer           = T*;
@@ -17,9 +17,9 @@ class Vector {
         using riterator         = std::reverse_iterator<iterator>;
         using const_riterator   = std::reverse_iterator<const_iterator>;
         using difference_type   = std::ptrdiff_t;
-		using size_type 		= std::size_t;
+	using size_type 		= std::size_t;
 		
-		const size_type DEFAULT_SIZE = 4;
+	const size_type DEFAULT_SIZE = 4;
 
 	private:
 		size_type m_size;
@@ -73,26 +73,26 @@ class Vector {
 		}
 
 		// ITERATORS
-		iterator begin() 					{ return m_data; }
-		riterator rbegin() 					{ return riterator(end()); }
+		iterator begin() 			{ return m_data; }
+		riterator rbegin() 			{ return riterator(end()); }
 		const_iterator begin() const  		{ return m_data; }
 		const_riterator rbegin() const 		{ return riterator(end()); }
 
-		iterator end() 						{ return m_data + m_size; }
-		riterator rend() 					{ return riterator(begin()); }
-		const_iterator end() const 			{ return m_data + m_size; }
+		iterator end() 				{ return m_data + m_size; }
+		riterator rend() 			{ return riterator(begin()); }
+		const_iterator end() const 		{ return m_data + m_size; }
 		const_riterator rend() const 		{ return riterator(begin()); }
 
 		const_iterator cbegin() const 		{ return begin(); }
-		const_riterator crbegin() 			{ return rbegin(); }
+		const_riterator crbegin() 		{ return rbegin(); }
 
 		const_iterator cend() const 		{ return end(); }
-		const_riterator crend() 			{ return rend(); }
+		const_riterator crend() 		{ return rend(); }
 
 		// NON-MUTATING FUNCTIONS
-		size_type size() const 				{ return m_size; }
+		size_type size() const 			{ return m_size; }
 		size_type capacity() const  		{ return m_capacity; }
-		bool empty() const 					{ return m_size == 0; };
+		bool empty() const 			{ return m_size == 0; };
 
 		// MUTATING FUNCTIONS
 		void push(const T &data) {
@@ -119,16 +119,16 @@ class Vector {
 		}
 
 		// VALIDATED ACCESS
-		T& at(int n) 					 { validateIndex(n); return m_data[n]; }
+		T& at(int n) 				 { validateIndex(n); return m_data[n]; }
 		const T& at(int n) const 		 { validateIndex(n); return m_data[n]; }
 
 		// NON-VALIDATED ACCESS
-		T& front() 						 { return m_data[0]; }
+		T& front() 				 { return m_data[0]; }
 		const T& front() const 			 { return m_data[0]; }
-		T& back() 						 { return m_data[m_size-1]; }
+		T& back() 				 { return m_data[m_size-1]; }
 		const T& back() const 			 { return m_data[m_size-1]; }
 		T& operator[](int i) 			 { return m_data[i]; }
-		const T& operator[](int i) const { return m_data[i]; }
+		const T& operator[](int i) const 	 { return m_data[i]; }
 		
 		// COMPARISON
 		bool operator!=(const Vector &other) const { return *this == other; }
