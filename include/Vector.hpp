@@ -17,7 +17,7 @@ class Vector {
         using riterator         = std::reverse_iterator<iterator>;
         using const_riterator   = std::reverse_iterator<const_iterator>;
         using difference_type   = std::ptrdiff_t;
-	using size_type 		= std::size_t;
+	using size_type 	= std::size_t;
 		
 	const size_type DEFAULT_SIZE = 4;
 
