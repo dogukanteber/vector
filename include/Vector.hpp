@@ -38,6 +38,13 @@ class Vector {
 			, m_capacity(size)
 			, m_data(new T[m_capacity])
 		{ }
+		Vector(std::initializer_list<T> const &list)
+			: m_size(list.size())
+			, m_capacity(list.size() * 2)
+			, m_data(new T[m_capacity])
+		{
+			std::copy(list.begin(), list.end(), m_data);
+		}
 		Vector(const size_type count, const T &data)
 			: m_size(count)
 			, m_capacity(count)
@@ -59,7 +66,7 @@ class Vector {
 
 		Vector<T>& operator=(const Vector<T> &other) {
 
-			// check assigning itself
+			// prevent assigning itself
 			if ( this == &other )
 				return *this;
 
