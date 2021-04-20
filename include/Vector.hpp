@@ -19,7 +19,7 @@ class Vector {
 		using difference_type   = std::ptrdiff_t;
 		using size_type 	= std::size_t;
 		
-	const size_type DEFAULT_SIZE = 4;
+		const size_type DEFAULT_SIZE = 4;
 
 	private:
 		size_type m_size;
