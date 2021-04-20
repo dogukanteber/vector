@@ -7,17 +7,17 @@
 template <typename T> 
 class Vector {
 	public:
-	using value_type        = T;
-        using reference         = T&;
-        using const_reference   = T const&;
-        using pointer           = T*;
-        using const_pointer     = T const*;
-        using iterator          = T*;
-        using const_iterator    = T const*;
-        using riterator         = std::reverse_iterator<iterator>;
-        using const_riterator   = std::reverse_iterator<const_iterator>;
-        using difference_type   = std::ptrdiff_t;
-	using size_type 	= std::size_t;
+		using value_type        = T;
+		using reference         = T&;
+		using const_reference   = T const&;
+		using pointer           = T*;
+		using const_pointer     = T const*;
+		using iterator          = T*;
+		using const_iterator    = T const*;
+		using riterator         = std::reverse_iterator<iterator>;
+		using const_riterator   = std::reverse_iterator<const_iterator>;
+		using difference_type   = std::ptrdiff_t;
+		using size_type 	= std::size_t;
 		
 	const size_type DEFAULT_SIZE = 4;
 
